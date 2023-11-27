@@ -1,337 +1,306 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-	<title></title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<meta name="format-detection" content="telephone=no">
-	<script>
-		function CBR_XML_Daily_Ru(rates) {
-			function trend(current, previous) {
-				if (current > previous) return '';
-				if (current < previous) return '';
-				return '';
-			}
-
-			var USDrate = rates.Valute.USD.Value.toFixed(2).replace('.', ',');
-			var USD = document.getElementById('USD');
-			USD.innerHTML = USD.innerHTML.replace('00,00', USDrate);
-			USD.innerHTML += trend(rates.Valute.USD.Value, rates.Valute.USD.Previous);
-
-			var EURrate = rates.Valute.EUR.Value.toFixed(2).replace('.', ',');
-			var EUR = document.getElementById('EUR');
-			EUR.innerHTML = EUR.innerHTML.replace('00,00', EURrate);
-			EUR.innerHTML += trend(rates.Valute.EUR.Value, rates.Valute.EUR.Previous);
-		}
-
-	</script>
-	<link rel="dns-prefetch" href="https://www.cbr-xml-daily.ru/">
-	<script src="//www.cbr-xml-daily.ru/daily_jsonp.js" async></script>
-	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
-	<link rel="stylesheet" href="/css/style.min.css">
-</head>
-
-<body>
-	<div class="wrapper">
-		<div class="sponsor _container"><a class="sponsor__link" href="https://translogistic-spb.ru" target="_blank">
-				<picture class="picture">
-					<source srcset="/img/trans-logistik.avif" type="image/avif" />
-					<source srcset="/img/trans-logistik.webp" type="image/webp" />
-					<source srcset="/img/trans-logistik.png" type="image/png" /><img src="/img/trans-logistik.png"
-						alt="компания Транс-Логисти" />
-				</picture>
-				<div class="sponsor__title">Транс-Логистик</div>
-			</a></div>
-		<header class="header">
-			<div class="header__wrap _container">
-				<div class="header__head">
-					<div class="header__logo"><a href="/index.html">
-							<picture class="picture">
-								<source srcset="/img/logo.avif" type="image/avif" />
-								<source srcset="/img/logo.webp" type="image/webp" />
-								<source srcset="/img/logo.png" type="image/png" /><img src="/img/logo.png" alt="логотип" />
-							</picture>
-						</a></div>
-					<div class="header__menu menu">
-						<div class="menu__icon"><span></span></div>
-						<nav class="menu__body">
-							<ul class="menu__list">
-								<li><a class="menu__link" href="/news.html">новости</a></li>
-								<li class="menu__item"><a class="menu__link">мекан</a><span class="menu__arrow"></span>
-									<ul class="menu__sub-list sub-menu">
-										<li><a class="menu__sub-link" href="/mekan/about.html">О нас</a></li>
-										<li><a class="menu__sub-link" href="/mekan/cooperation.html">Сотрудничество</a></li>
-										<li><a class="menu__sub-link" href="/mekan/students.html">Студентам</a></li>
-									</ul>
-								</li>
-								<li class="menu__item"><a class="menu__link">галерея</a><span class="menu__arrow"></span>
-									<ul class="menu__sub-list sub-menu">
-										<li><a class="menu__sub-link" href="portfolio.html">фото</a></li>
-										<li><a class="menu__sub-link" href="video.html">видео</a></li>
-									</ul>
-								</li>
-								<li><a class="menu__link" href="/portfolio.html">галерея</a></li>
-								<li><a class="menu__link" href="/mekan/contacts.html">Контакты</a></li>
-							</ul>
-						</nav>
-					</div>
-					<div class="header__decription">Туркменское<br>общество<br>Мекан</div>
-				</div>
-			</div>
-		</header>
-		<main class="main">
-			<section class="slider-section">
-				<div class="slider-section__container _container">
-					<div class="slider-section__title">Новости</div>
-					<div class="slider-section__wrap">
-						<div class="slider-section__sliders">
-							<div class="slider">
-								<div class="slider__wrapper"><a class="slid" href="#">
-										<div class="slid__title">Гурбангулы Бердымухамедов примет участие во внеочередном саммите
-											ОТГ в Анкаре</div>
-										<div class="slid__img">
-											<picture class="picture">
-												<source srcset="img/news/slid-01.avif" type="image/avif" />
-												<source srcset="img/news/slid-01.webp" type="image/webp" />
-												<source srcset="img/news/slid-01.jpg" type="image/jpg" /><img
-													src="img/news/slid-01.jpg" alt="" />
-											</picture>
-										</div>
-									</a><a class="slid" href="#">
-										<div class="slid__title">Женские образы в творчестве Иззата Клычева</div>
-										<div class="slid__img">
-											<picture class="picture">
-												<source srcset="img/news/slid-02.avif" type="image/avif" />
-												<source srcset="img/news/slid-02.webp" type="image/webp" />
-												<source srcset="img/news/slid-02.jpg" type="image/jpg" /><img
-													src="img/news/slid-02.jpg" alt="" />
-											</picture>
-										</div>
-									</a><a class="slid" href="#">
-										<div class="slid__title">Роль Санкт-Петербурга в становлении и реализации</div>
-										<div class="slid__img">
-											<picture class="picture">
-												<source srcset="img/news/slid-03.avif" type="image/avif" />
-												<source srcset="img/news/slid-03.webp" type="image/webp" />
-												<source srcset="img/news/slid-03.jpg" type="image/jpg" /><img
-													src="img/news/slid-03.jpg" alt="" />
-											</picture>
-										</div>
-									</a><a class="slid" href="#">
-										<div class="slid__title">Информагентство ТАСС намерено развивать сотрудничество с
-											Туркменистаном</div>
-										<div class="slid__img">
-											<picture class="picture">
-												<source srcset="img/news/slid-04.avif" type="image/avif" />
-												<source srcset="img/news/slid-04.webp" type="image/webp" />
-												<source srcset="img/news/slid-04.jpg" type="image/jpg" /><img
-													src="img/news/slid-04.jpg" alt="" />
-											</picture>
-										</div>
-									</a></div>
-							</div>
-							<div class="slider-preview">
-								<div class="slider-preview__wrapper">
-									<div class="slid-preview">
-										<div class="slid-preview__img">
-											<picture class="picture">
-												<source srcset="img/news/slid-01.avif" type="image/avif" />
-												<source srcset="img/news/slid-01.webp" type="image/webp" />
-												<source srcset="img/news/slid-01.jpg" type="image/jpg" /><img
-													src="img/news/slid-01.jpg" alt="" />
-											</picture>
-											<div class="slid-preview__title">
-												<p>Гурбангулы Бердымухамедов примет участие во внеочередном саммите ОТГ в Анкаре</p>
-											</div>
-										</div>
-									</div>
-									<div class="slid-preview">
-										<div class="slid-preview__img">
-											<picture class="picture">
-												<source srcset="img/news/slid-02.avif" type="image/avif" />
-												<source srcset="img/news/slid-02.webp" type="image/webp" />
-												<source srcset="img/news/slid-02.jpg" type="image/jpg" /><img
-													src="img/news/slid-02.jpg" alt="" />
-											</picture>
-											<div class="slid-preview__title">
-												<p>Женские образы в творчестве Иззата Клычева</p>
-											</div>
-										</div>
-									</div>
-									<div class="slid-preview">
-										<div class="slid-preview__img">
-											<picture class="picture">
-												<source srcset="img/news/slid-03.avif" type="image/avif" />
-												<source srcset="img/news/slid-03.webp" type="image/webp" />
-												<source srcset="img/news/slid-03.jpg" type="image/jpg" /><img
-													src="img/news/slid-03.jpg" alt="" />
-											</picture>
-											<div class="slid-preview__title">
-												<p>Роль Санкт-Петербурга в становлении и реализации</p>
-											</div>
-										</div>
-									</div>
-									<div class="slid-preview">
-										<div class="slid-preview__img">
-											<picture class="picture">
-												<source srcset="img/news/slid-04.avif" type="image/avif" />
-												<source srcset="img/news/slid-04.webp" type="image/webp" />
-												<source srcset="img/news/slid-04.jpg" type="image/jpg" /><img
-													src="img/news/slid-04.jpg" alt="" />
-											</picture>
-											<div class="slid-preview__title">
-												<p>Информагентство ТАСС намерено развивать сотрудничество с Туркменистаном</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="widget">
-							<div class="widget__title">Твой город</div>
-							<div class="widget__list">
-								<div class="widget__item">
-									<div class="widget__widget">
-										<div class="widget__widget_temp weather__forecast_ashgabat"></div>
-										<div class="weather__city">Ашхабад</div>
-									</div>
-								</div>
-								<div class="widget__item">
-									<div class="widget__widget">
-										<div class="widget__widget_temp weather__forecast"></div>
-										<div class="weather__city">СПБ</div>
-									</div>
-								</div>
-								<div class="widget__item">
-									<div class="widget__widget widget__widget_exchange">
-										<div id="USD">$ 00,00</div>
-										<div id="EUR">€ 00,00</div>
-									</div>
-								</div>
-								<div class="widget__item">
-									<div class="widget__widget widget__widget_time" id="clock"> </div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="posting">
-				<div class="posting__wrap _container"> <a class="post" href="#">
-						<div class="post__block">
-							<div class="post__title">Отделение гуманитарной ассоциации туркмен мира по санкт-петербургу и
-								северо-западу российской федерации, общество туркменской культуры в санкт-петербурге "мекан"
-							</div>
-							<div class="post__text">18 лет мы работает над сохранением и приумножением ценностей и традиций
-								туркменского народа в самом европейском городе России - Санкт-Петербурге</div>
-						</div>
-						<div class="post__img">
-							<picture class="picture">
-								<source srcset="img/posting/obshchestvo-mekan.avif" type="image/avif" />
-								<source srcset="img/posting/obshchestvo-mekan.webp" type="image/webp" />
-								<source srcset="img/posting/obshchestvo-mekan.jpg" type="image/jpg" /><img
-									src="img/posting/obshchestvo-mekan.jpg" alt="" />
-							</picture>
-						</div>
-					</a></div>
-			</section>
-			<section class="leaders">
-				<div class="leaders__wrap _container">
-					<h3 class="leaders__title">наши лидеры</h3>
-					<div class="leaders__list">
-						<div class="leader">
-							<div class="leader__img">
-								<picture class="picture">
-									<source srcset="img/leaders/seyidov.avif" type="image/avif" />
-									<source srcset="img/leaders/seyidov.webp" type="image/webp" />
-									<source srcset="img/leaders/seyidov.png" type="image/png" /><img
-										src="img/leaders/seyidov.png" alt="Нургелди Реджепович Сейидов" />
-								</picture>
-							</div>
-							<div class="leader__name"><span>Нургелди Реджепович Сейидов</span></div>
-							<div class="leader__post"><span>Руководитель</span></div>
-						</div>
-						<div class="leader">
-							<div class="leader__img">
-								<picture class="picture">
-									<source srcset="img/leaders/maksimycheva.avif" type="image/avif" />
-									<source srcset="img/leaders/maksimycheva.webp" type="image/webp" />
-									<source srcset="img/leaders/maksimycheva.png" type="image/png" /><img
-										src="img/leaders/maksimycheva.png" alt="Мария Максимычева" />
-								</picture>
-							</div>
-							<div class="leader__name"><span>Мария Максимычева</span></div>
-							<div class="leader__post"><span>Менеджер культурных проектов</span></div>
-						</div>
-						<div class="leader">
-							<div class="leader__img">
-								<picture class="picture">
-									<source srcset="img/leaders/khatamova.avif" type="image/avif" />
-									<source srcset="img/leaders/khatamova.webp" type="image/webp" />
-									<source srcset="img/leaders/khatamova.png" type="image/png" /><img
-										src="img/leaders/khatamova.png" alt="Джерен Хатамова" />
-								</picture>
-							</div>
-							<div class="leader__name"><span>Джерен Хатамова</span></div>
-							<div class="leader__post"><span>Председатель СТС "Багтыярлык"</span></div>
-						</div>
-						<div class="leader">
-							<div class="leader__img">
-								<picture class="picture">
-									<source srcset="img/leaders/meret.avif" type="image/avif" />
-									<source srcset="img/leaders/meret.webp" type="image/webp" />
-									<source srcset="img/leaders/meret.png" type="image/png" /><img src="img/leaders/meret.png"
-										alt="Мерет" />
-								</picture>
-							</div>
-							<div class="leader__name"><span>мерет</span></div>
-							<div class="leader__post"><span>Мерет</span></div>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
-		<footer class="footer">
-			<div class="footer__wrap _container">
-				<div class="footer__contacts contacts">
-					<div class="contacts__title">Контакты</div>
-					<div class="contacts__data">
-						<div class="data-item data-item_location">Санкт-Петербург Моховая 15</div>
-						<div class="data-item data-item_tel"><a href="tel:+78129615533">+7 (812) 961-55-33</a></div>
-						<div class="data-item data-item_mail"><a href="mailto:turkmencenter@bk.ru">turkmencenter@bk.ru</a>
-						</div>
-					</div>
-				</div>
-				<div class="footer__logo">
-					<div class="footer__logo-img">
-						<picture class="picture">
-							<source srcset="/img/logo.avif" type="image/avif" />
-							<source srcset="/img/logo.webp" type="image/webp" />
-							<source srcset="/img/logo.png" type="image/png" /><img src="/img/logo.png" alt="логотип" />
-						</picture>
-					</div>
-				</div>
-				<div class="footer__contacts contacts">
-					<div class="contacts__title">мы в социальных сетях</div>
-					<div class="contacts__data">
-						<div class="social-item"><a href="#"> <img src="/img/icons/youtube.svg" alt="ютуб"></a></div>
-						<div class="social-item"><a href="#"> <img src="/img/icons/vk.svg" alt="вк"></a></div><a
-							class="widget-link" href="https://www.cbr-xml-daily.ru/" target="_blank">Виджет курсов валют</a>
-					</div>
-				</div>
-			</div>
-			<div class="footer__copyright _container">&#9400; 2023 МЕКАН</div>
-		</footer>
-	</div>
-	<script src="js/libs/swiper-bundle.min.js"></script>
-	<script src="js/weather.js"></script>
-	<script src="js/slider.min.js"></script>
-	<script src="js/libs/money.min.js"></script>
-	<script src="js/clock.min.js"></script>
-	<script src="/js/script.min.js"></script>
-</body>
-
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <script>
+      function CBR_XML_Daily_Ru(rates) {
+      	function trend(current, previous) {
+      		if (current > previous) return '';
+      		if (current < previous) return '';
+      		return '';
+      	}
+      
+      	var USDrate = rates.Valute.USD.Value.toFixed(2).replace('.', ',');
+      	var USD = document.getElementById('USD');
+      	USD.innerHTML = USD.innerHTML.replace('00,00', USDrate);
+      	USD.innerHTML += trend(rates.Valute.USD.Value, rates.Valute.USD.Previous);
+      
+      	var EURrate = rates.Valute.EUR.Value.toFixed(2).replace('.', ',');
+      	var EUR = document.getElementById('EUR');
+      	EUR.innerHTML = EUR.innerHTML.replace('00,00', EURrate);
+      	EUR.innerHTML += trend(rates.Valute.EUR.Value, rates.Valute.EUR.Previous);
+      }
+      
+    </script>
+    <link rel="dns-prefetch" href="https://www.cbr-xml-daily.ru/">
+    <script src="//www.cbr-xml-daily.ru/daily_jsonp.js" async></script>
+    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="sponsor _container"><a class="sponsor__link" href="https://translogistic-spb.ru" target="_blank">
+          <picture class="picture">
+            <source srcset="/img/trans-logistik.avif" type="image/avif"/>
+            <source srcset="/img/trans-logistik.webp" type="image/webp"/>
+            <source srcset="/img/trans-logistik.png" type="image/png"/><img src="/img/trans-logistik.png" alt="компания Транс-Логисти"/>
+          </picture>
+          <div class="sponsor__title">Транс-Логистик</div></a></div>
+      <header class="header">
+        <div class="header__wrap _container">
+          <div class="header__head"> 
+            <div class="header__logo"><a href="/index.html">
+                <picture class="picture">
+                  <source srcset="/img/logo.avif" type="image/avif"/>
+                  <source srcset="/img/logo.webp" type="image/webp"/>
+                  <source srcset="/img/logo.png" type="image/png"/><img src="/img/logo.png" alt="логотип"/>
+                </picture></a></div>
+            <div class="header__menu menu">
+              <div class="menu__icon"><span></span></div>
+              <nav class="menu__body">
+                <ul class="menu__list">
+                  <li><a class="menu__link" href="/news.html">новости</a></li>
+                  <li class="menu__item"><a class="menu__link">мекан</a><span class="menu__arrow"></span>
+                    <ul class="menu__sub-list sub-menu">
+                      <li><a class="menu__sub-link" href="/mekan/about.html">О нас</a></li>
+                      <li><a class="menu__sub-link" href="/mekan/cooperation.html">Сотрудничество</a></li>
+                      <li><a class="menu__sub-link" href="/mekan/students.html">Студентам</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu__item"><a class="menu__link">галерея</a><span class="menu__arrow"></span>
+                    <ul class="menu__sub-list sub-menu">
+                      <li><a class="menu__sub-link" href="portfolio.html">фото</a></li>
+                      <li><a class="menu__sub-link" href="video.html">видео</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="menu__link" href="/portfolio.html">галерея</a></li>
+                  <li><a class="menu__link" href="/mekan/contacts.html">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header__decription">Туркменское<br>общество<br>Мекан</div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="slider-section">
+          <div class="slider-section__container _container">
+            <div class="slider-section__title">Новости</div>
+            <div class="slider-section__wrap">
+              <div class="slider-section__sliders">
+                <div class="slider">
+                  <div class="slider__wrapper"><a class="slid" href="#"> 
+                      <div class="slid__title">Гурбангулы Бердымухамедов примет участие во внеочередном саммите ОТГ в Анкаре</div>
+                      <div class="slid__img">
+                        <picture class="picture">
+                          <source srcset="img/news/slid-01.avif" type="image/avif"/>
+                          <source srcset="img/news/slid-01.webp" type="image/webp"/>
+                          <source srcset="img/news/slid-01.jpg" type="image/jpg"/><img src="img/news/slid-01.jpg" alt=""/>
+                        </picture>
+                      </div></a><a class="slid" href="#"> 
+                      <div class="slid__title">Женские образы в творчестве Иззата Клычева</div>
+                      <div class="slid__img">
+                        <picture class="picture">
+                          <source srcset="img/news/slid-02.avif" type="image/avif"/>
+                          <source srcset="img/news/slid-02.webp" type="image/webp"/>
+                          <source srcset="img/news/slid-02.jpg" type="image/jpg"/><img src="img/news/slid-02.jpg" alt=""/>
+                        </picture>
+                      </div></a><a class="slid" href="#"> 
+                      <div class="slid__title">Роль Санкт-Петербурга в становлении и реализации</div>
+                      <div class="slid__img">
+                        <picture class="picture">
+                          <source srcset="img/news/slid-03.avif" type="image/avif"/>
+                          <source srcset="img/news/slid-03.webp" type="image/webp"/>
+                          <source srcset="img/news/slid-03.jpg" type="image/jpg"/><img src="img/news/slid-03.jpg" alt=""/>
+                        </picture>
+                      </div></a><a class="slid" href="#"> 
+                      <div class="slid__title">Информагентство ТАСС намерено развивать сотрудничество с Туркменистаном</div>
+                      <div class="slid__img">
+                        <picture class="picture">
+                          <source srcset="img/news/slid-04.avif" type="image/avif"/>
+                          <source srcset="img/news/slid-04.webp" type="image/webp"/>
+                          <source srcset="img/news/slid-04.jpg" type="image/jpg"/><img src="img/news/slid-04.jpg" alt=""/>
+                        </picture>
+                      </div></a></div>
+                </div>
+                <div class="slider-preview">
+                  <div class="slider-preview__wrapper">
+                    <div class="slid-preview">
+                      <div class="slid-preview__img">
+                        <picture class="picture">
+                          <source srcset="img/news/slid-01.avif" type="image/avif"/>
+                          <source srcset="img/news/slid-01.webp" type="image/webp"/>
+                          <source srcset="img/news/slid-01.jpg" type="image/jpg"/><img src="img/news/slid-01.jpg" alt=""/>
+                        </picture>
+                        <div class="slid-preview__title">
+                          <p>Гурбангулы Бердымухамедов примет участие во внеочередном саммите ОТГ в Анкаре</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slid-preview">
+                      <div class="slid-preview__img">
+                        <picture class="picture">
+                          <source srcset="img/news/slid-02.avif" type="image/avif"/>
+                          <source srcset="img/news/slid-02.webp" type="image/webp"/>
+                          <source srcset="img/news/slid-02.jpg" type="image/jpg"/><img src="img/news/slid-02.jpg" alt=""/>
+                        </picture>
+                        <div class="slid-preview__title">
+                          <p>Женские образы в творчестве Иззата Клычева</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slid-preview">
+                      <div class="slid-preview__img">
+                        <picture class="picture">
+                          <source srcset="img/news/slid-03.avif" type="image/avif"/>
+                          <source srcset="img/news/slid-03.webp" type="image/webp"/>
+                          <source srcset="img/news/slid-03.jpg" type="image/jpg"/><img src="img/news/slid-03.jpg" alt=""/>
+                        </picture>
+                        <div class="slid-preview__title">
+                          <p>Роль Санкт-Петербурга в становлении и реализации</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slid-preview">
+                      <div class="slid-preview__img">
+                        <picture class="picture">
+                          <source srcset="img/news/slid-04.avif" type="image/avif"/>
+                          <source srcset="img/news/slid-04.webp" type="image/webp"/>
+                          <source srcset="img/news/slid-04.jpg" type="image/jpg"/><img src="img/news/slid-04.jpg" alt=""/>
+                        </picture>
+                        <div class="slid-preview__title">
+                          <p>Информагентство ТАСС намерено развивать сотрудничество с Туркменистаном</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="widget">
+                <div class="widget__title">Твой город</div>
+                <div class="widget__list">
+                  <div class="widget__item">
+                    <div class="widget__widget">
+                      <div class="widget__widget_temp weather__forecast_ashgabat"></div>
+                      <div class="weather__city">Ашхабад</div>
+                    </div>
+                  </div>
+                  <div class="widget__item">
+                    <div class="widget__widget">
+                      <div class="widget__widget_temp weather__forecast"></div>
+                      <div class="weather__city">СПБ</div>
+                    </div>
+                  </div>
+                  <div class="widget__item">
+                    <div class="widget__widget widget__widget_exchange">
+                      <div id="USD">$  00,00</div>
+                      <div id="EUR">€  00,00</div>
+                    </div>
+                  </div>
+                  <div class="widget__item">
+                    <div class="widget__widget widget__widget_time" id="clock"> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="posting">
+          <div class="posting__wrap _container"> <a class="post" href="#">
+              <div class="post__block">
+                <div class="post__title">Отделение гуманитарной ассоциации туркмен мира по санкт-петербургу и северо-западу российской федерации, общество туркменской культуры в санкт-петербурге "мекан"</div>
+                <div class="post__text">18 лет мы работает над сохранением и приумножением ценностей и традиций туркменского народа в самом европейском городе России - Санкт-Петербурге</div>
+              </div>
+              <div class="post__img"> 
+                <picture class="picture">
+                  <source srcset="img/posting/obshchestvo-mekan.avif" type="image/avif"/>
+                  <source srcset="img/posting/obshchestvo-mekan.webp" type="image/webp"/>
+                  <source srcset="img/posting/obshchestvo-mekan.jpg" type="image/jpg"/><img src="img/posting/obshchestvo-mekan.jpg" alt=""/>
+                </picture>
+              </div></a></div>
+        </section>
+        <section class="leaders">
+          <div class="leaders__wrap _container">
+            <h3 class="leaders__title">наши лидеры</h3>
+            <div class="leaders__list"> 
+              <div class="leader">
+                <div class="leader__img">
+                  <picture class="picture">
+                    <source srcset="img/leaders/seyidov.avif" type="image/avif"/>
+                    <source srcset="img/leaders/seyidov.webp" type="image/webp"/>
+                    <source srcset="img/leaders/seyidov.png" type="image/png"/><img src="img/leaders/seyidov.png" alt="Нургелди Реджепович Сейидов"/>
+                  </picture>
+                </div>
+                <div class="leader__name"><span>Нургелди Реджепович Сейидов</span></div>
+                <div class="leader__post"><span>Руководитель</span></div>
+              </div>
+              <div class="leader">
+                <div class="leader__img">
+                  <picture class="picture">
+                    <source srcset="img/leaders/maksimycheva.avif" type="image/avif"/>
+                    <source srcset="img/leaders/maksimycheva.webp" type="image/webp"/>
+                    <source srcset="img/leaders/maksimycheva.png" type="image/png"/><img src="img/leaders/maksimycheva.png" alt="Мария Максимычева"/>
+                  </picture>
+                </div>
+                <div class="leader__name"><span>Мария Максимычева</span></div>
+                <div class="leader__post"><span>Менеджер культурных проектов</span></div>
+              </div>
+              <div class="leader">
+                <div class="leader__img">
+                  <picture class="picture">
+                    <source srcset="img/leaders/khatamova.avif" type="image/avif"/>
+                    <source srcset="img/leaders/khatamova.webp" type="image/webp"/>
+                    <source srcset="img/leaders/khatamova.png" type="image/png"/><img src="img/leaders/khatamova.png" alt="Джерен Хатамова"/>
+                  </picture>
+                </div>
+                <div class="leader__name"><span>Джерен Хатамова</span></div>
+                <div class="leader__post"><span>Председатель СТС "Багтыярлык"</span></div>
+              </div>
+              <div class="leader">
+                <div class="leader__img">
+                  <picture class="picture">
+                    <source srcset="img/leaders/meret.avif" type="image/avif"/>
+                    <source srcset="img/leaders/meret.webp" type="image/webp"/>
+                    <source srcset="img/leaders/meret.png" type="image/png"/><img src="img/leaders/meret.png" alt="Мерет"/>
+                  </picture>
+                </div>
+                <div class="leader__name"><span>мерет</span></div>
+                <div class="leader__post"><span>Мерет</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__wrap _container">
+          <div class="footer__contacts contacts">
+            <div class="contacts__title">Контакты</div>
+            <div class="contacts__data"> 
+              <div class="data-item data-item_location">Санкт-Петербург Моховая 15</div>
+              <div class="data-item data-item_tel"><a href="tel:+78129615533">+7 (812) 961-55-33</a></div>
+              <div class="data-item data-item_mail"><a href="mailto:turkmencenter@bk.ru">turkmencenter@bk.ru</a></div>
+            </div>
+          </div>
+          <div class="footer__logo"> 
+            <div class="footer__logo-img"> 
+              <picture class="picture">
+                <source srcset="/img/logo.avif" type="image/avif"/>
+                <source srcset="/img/logo.webp" type="image/webp"/>
+                <source srcset="/img/logo.png" type="image/png"/><img src="/img/logo.png" alt="логотип"/>
+              </picture>
+            </div>
+          </div>
+          <div class="footer__contacts contacts">
+            <div class="contacts__title">мы в социальных сетях</div>
+            <div class="contacts__data"> 
+              <div class="social-item"><a href="#"> <img src="/img/icons/youtube.svg" alt="ютуб"></a></div>
+              <div class="social-item"><a href="#"> <img src="/img/icons/vk.svg" alt="вк"></a></div><a class="widget-link" href="https://www.cbr-xml-daily.ru/" target="_blank">Виджет курсов валют</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copyright _container">&#9400; 2023 МЕКАН</div>
+      </footer>
+    </div>
+    <script src="js/libs/swiper-bundle.min.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/slider.min.js"></script>
+    <script src="js/libs/money.min.js"></script>
+    <script src="js/clock.min.js"></script>
+    <script src="js/script.min.js"></script>
+  </body>
 </html>
